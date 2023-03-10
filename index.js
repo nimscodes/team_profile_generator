@@ -102,6 +102,7 @@ function createTeam(team) {
         } else {
             // at this point, team array should have a manager and however many engineers and interns the user inputted
             const html = render(team); // html will be html file as string
+            console.log(team);
             // write html to a file index.html using fs library
             fs.writeFile(outputPath, html, (err) => {
                 if (err) {
@@ -130,12 +131,12 @@ function createManager(team) {
         },
         {
             type: 'input',
-            name: 'name',
+            name: 'email',
             message: "What is the team manager's email?",
         },
         {
             type: 'input',
-            name: 'name',
+            name: 'officeNumber',
             message: "What is the team manager's office number?",
         }
     ]).then((managerDetails) => {
