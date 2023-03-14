@@ -8,18 +8,12 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-console.log(outputPath);
-
 const render = require("./src/page-template.js");
-// const Engineer = require("./lib/Engineer");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 function createEngineer(team) {
     inquirer.prompt([
-        // Engineer name
-        // Engineer id
-        // Engineer email
-        // Engineer GitHub username
+       
         {
             type: 'input',
             name: 'name',
